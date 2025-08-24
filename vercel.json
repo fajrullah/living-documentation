@@ -1,7 +1,21 @@
-
 {
-    "builds": [
-      { "src": "package.json", "use": "@vercel/cli", "config": { "outputDirectory": "storybook-static" } }
-    ]
+    "redirects": [
+      {
+        "source": "/storybook",
+        "destination": "/storybook/"
+      }
+    ],
+    "rewrites": [
+      {
+        "source": "/storybook",
+        "destination": "/storybook"
+      },
+      {
+        "source": "/(.*)",
+        "destination": "/"
+      }
+    ],
+    "github": {
+      "silent": true
+    }
   }
-  
