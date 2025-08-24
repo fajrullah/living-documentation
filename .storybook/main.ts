@@ -1,31 +1,27 @@
-import type { StorybookConfig } from "@storybook/nextjs-vite";
+import type { StorybookConfig } from "@storybook/nextjs";
 
 const config: StorybookConfig = {
-  "stories": [
-    "../src/**/*.mdx",
-    "../src/**/*.stories.@(js|jsx|ts|tsx)",
+  stories: [
+    "../stories/**/*.mdx",
+    "../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)",
   ],
-  "addons": [
-    "@chromatic-com/storybook",
-    {
-      name: "@storybook/addon-docs",
-      options: { autodocs: "tag" },
-    },
-    "@storybook/addon-onboarding",
-    "@storybook/addon-a11y",
-    "@storybook/addon-vitest",
+  addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
+    "@chromatic-com/storybook",
     "@storybook/addon-interactions",
   ],
-  "framework": {
-    "name": "@storybook/nextjs-vite",
-    "options": {}
+  framework: {
+    name: "@storybook/nextjs",
+    options: {
+      builder: {
+        useSWC: true,
+      },
+    },
   },
-  "staticDirs": [
-    { from: '../public', to: 'public' },
-    { from: '../public/mockServiceWorker.js', to: 'mockServiceWorker.js' },
-    { from: '../assets/fonts', to: 'assets/fonts' }, // Local fonts
-  ]
+  docs: {
+    autodocs: "tag",
+  },
+  staticDirs: ["../public"],
 };
 export default config;
