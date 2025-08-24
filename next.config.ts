@@ -1,7 +1,14 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  async rewrites() {
+    return [
+      {
+        source: "/storybook/:path*",
+        destination: "/storybook/:path*", // static files from public
+      },
+    ];
+  },
 };
 
 export default nextConfig;
