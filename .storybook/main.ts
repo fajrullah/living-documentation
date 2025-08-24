@@ -23,7 +23,9 @@ const config: StorybookConfig = {
     "options": {}
   },
   "staticDirs": [
-    "../public"
+    { from: '../public', to: 'public' },
+    { from: '../public/mockServiceWorker.js', to: 'mockServiceWorker.js' },
+    { from: '../assets/fonts', to: 'assets/fonts' }, // Local fonts
   ]
 };
 export default config;
