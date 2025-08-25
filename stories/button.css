@@ -9,11 +9,11 @@
 }
 .storybook-button--primary {
   color: white;
-  background-color: #1ea7fd;
+  background-color: #B14EB5;
 }
 .storybook-button--secondary {
-  color: #333;
-  background-color: transparent;
+  color: white;  
+  background-color: #300163;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
 }
 .storybook-button--small {
