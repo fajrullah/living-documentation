@@ -1,0 +1,41 @@
+.storybook-input {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: "Arial", sans-serif;
+    transition: all 0.2s ease;
+    outline: none;
+  }
+  
+  .storybook-input:focus {
+    border-color: #300163;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+  }
+  
+  .storybook-input--small {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+  
+  .storybook-input--medium {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+  
+  .storybook-input--large {
+    padding: 14px 18px;
+    font-size: 16px;
+  }
+  
+  .storybook-input--error {
+    border-color: #dc2626;
+  }
+  
+  .storybook-input--disabled {
+    background-color: #f3f4f6;
+    cursor: not-allowed;
+    opacity: 0.7;
+  }
+  

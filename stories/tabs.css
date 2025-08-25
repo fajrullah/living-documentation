@@ -1,0 +1,26 @@
+.storybook-tabs {
+    display: flex;
+    border-bottom: 2px solid #e5e7eb;
+    gap: 16px;
+  }
+  
+  .storybook-tab {
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #6b7280;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: color 0.2s ease, border-color 0.2s ease;
+  }
+  
+  .storybook-tab:hover {
+    color: #B14EB5;
+  }
+  
+  .storybook-tab--active {
+    color: #B14EB5;
+    border-bottom: 2px solid #B14EB5;
+  }
+  
